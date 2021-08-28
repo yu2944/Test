@@ -1,0 +1,16 @@
+.tableStyle{
+  display: flex;
+}
+
+.dataTable{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+._th,._td{
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+}

@@ -1,0 +1,24 @@
+*{
+  font-family: "微软雅黑";
+  margin: 0;
+  padding: 0;
+}
+
+li.active{
+  background: #2a8689;
+}
+
+ul li{
+  list-style: none;
+}
+
+.textList{
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.textList .textLi{
+  margin-top: 10px;
+  font-size: 18px;
+  //text-decoration: underline;
+}
