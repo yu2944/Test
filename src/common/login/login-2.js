@@ -19,7 +19,6 @@ class Login2 extends React.Component {
             rediectToReferrer: false,  //是否重定向之前的界面
         }
         this.refName = React.createRef();
-        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     // onBlurName(event){
@@ -65,12 +64,13 @@ class Login2 extends React.Component {
         let history = this.props.history
         let {username, password} = this.state
         e.preventDefault();       //阻止事件提交
-        if (username === 'admin' && password === '123456') {
+        if (username === 'admin' && password === '123456' || username === '杨宇' && password === '123456') {
             console.log('登录成功~~')
             sessionStorage.setItem('username',username);
             this.setState({rediectToReferrer: true});
             let RedirectUrl = this.props.location.state?this.props.location.state.from.pathname : "/index";
             history.push(RedirectUrl);
+            console.log('账号：'+username , '密码'+password)
             // console.log(RedirectUrl)
         } else if (username.length === 0 && password.length === 0) {
             this.setState({
@@ -182,7 +182,7 @@ class Login2 extends React.Component {
                         </label>
                     </li>
                     <li style={{textAlign: 'center'}}>
-                        <input type="submit" value='登录' onClick={this.handleSubmit}/>
+                        <input type="submit" value='登录' onClick={this.handleSubmit.bind(this)}/>
                         <input type="reset" value='重置' disabled={!this.state.username && !this.state.password}
                                onClick={this.handleReset.bind(this)}/>
                     </li>

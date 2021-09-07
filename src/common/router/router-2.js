@@ -1,6 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
-import { createBrowserHistory } from "history";
+import {BrowserRouter as Router, Switch} from "react-router-dom";
 
 import FrontendAuth from "./FrontendAuth";
 import routerMap from "./routerMap";

@@ -4,6 +4,7 @@ import GonBack from "../../common/goback/gonback";
 import Table from "../../component/table/table";
 import Header from "../header";
 import GetTime from "../../component/test/getdate";
+import Body from "../body";
 
 export default class Index extends React.Component{
     constructor(props) {
@@ -29,19 +30,23 @@ export default class Index extends React.Component{
             height: "100px",
             // marginTop: "40%",
             background: "#5F9EA0",
-            position: "fixed",
+            // position: "fixed",
             left: "0",
             top: "90%",
             textAlign: "center",
-            lineHeight: "100px"
+            lineHeight: "100px",
+            // opacity: "0.2",
         }
         return (
             <div style={_Content}>
                 <Header />
                 <div style={_Header} className='Header'>
+                    <Body />
                 </div>
                 <div style={_Bottom} className='Bottom'>
-                    <GetTime />
+                    <div style={{position: "static",width: "100%", height: "100px",}}>
+                        <GetTime />
+                    </div>
                 </div>
             </div>
         )
